@@ -1,0 +1,1 @@
+linkedlistTraversal(head);

@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/webengage/Desktop/MS/DSA/Sorts/MergeSortTest'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _merge, symObjAddr: 0x0, symBinAddr: 0x100003AAC, symSize: 0x2A0 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _merge, symObjAddr: 0x0, symBinAddr: 0x100003AAC, symSize: 0x2A0 }
+  - { offsetInCU: 0xF5, offset: 0xF5, size: 0x8, addend: 0x0, symName: _mergeSort, symObjAddr: 0x2A0, symBinAddr: 0x100003D4C, symSize: 0x94 }
+  - { offsetInCU: 0x155, offset: 0x155, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x334, symBinAddr: 0x100003DE0, symSize: 0x14C }
+...
