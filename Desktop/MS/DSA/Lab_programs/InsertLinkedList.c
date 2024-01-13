@@ -69,7 +69,7 @@ int main(){
     third = (struct Node*)malloc(sizeof(struct Node));
     fourth = (struct Node*)malloc(sizeof(struct Node));
 
-    head->data=7;
+    head->data=9;
     head->next=second;
     second->data=7;
     second->next=third;
@@ -79,7 +79,9 @@ int main(){
     fourth->next=NULL;
     printf("Linked List before insertion\n");
     linkedlistTraversal(head);
-    
+     printf("Linked list after adding the Node to Node");
+    head=insertAfterNode(head,second,44);
+    linkedlistTraversal(head);
     printf("Linked List after insertion at the begining\n");
     head = inserAtBeginning(head, 22);
     linkedlistTraversal(head);
@@ -89,8 +91,6 @@ int main(){
     printf("Linked List insertion at the end\n");
     head = insertAtEnd(head,45);
     linkedlistTraversal(head);
-    printf("Linked list after adding the Node to Node");
-    head=insertAfterNode(head,second,44);
-    linkedlistTraversal(head);
+   
     return head;
 }

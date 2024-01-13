@@ -93,21 +93,21 @@ struct Node* deleteAtAGivenValue(struct Node *head, int data) {
 
     printf("linkedlist before deletion\n");
     linkedlistTraversal(head);
-   // head = deleteFirst(head);
+   head = deleteFirst(head);
 
-//     printf("linkedlist after deletion\n");
-//    linkedlistTraversal(head);
-
-//    head = linkedlistDeleteAtIndex(head,2);
-//    printf("linkedlist after deletion at an Index\n");
-//    linkedlistTraversal(head);
-   
-//    head = deleteAtEnd(head);
-//    printf("Linkedlist after deletion at the End\n");
-//    linkedlistTraversal(head);
-
-   head = deleteAtAGivenValue(head,211);
-   printf("LinkedList after deleting the node at a given value\n");
+    printf("linkedlist after deletion\n");
    linkedlistTraversal(head);
+
+   head = linkedlistDeleteAtIndex(head,2);
+   printf("linkedlist after deletion at an Index\n");
+   linkedlistTraversal(head);
+   
+   head = deleteAtEnd(head);
+   printf("Linkedlist after deletion at the End\n");
+   linkedlistTraversal(head);
+
+//    head = deleteAtAGivenValue(head,211);
+//    printf("LinkedList after deleting the node at a given value\n");
+//    linkedlistTraversal(head);
 
  }
