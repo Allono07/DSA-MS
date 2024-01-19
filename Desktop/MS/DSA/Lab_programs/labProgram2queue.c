@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 5
+
 
 void enqueue();
 void dequeue();
@@ -10,14 +10,19 @@ void isFull();
 void size();
 void peek();
 
-int inp_array[SIZE];
+int *inp_array;
 int rear = -1;
 int front = -1;
+int size1;
 
 
 
 int main()
 {
+    printf("Enter the size of the queue ");
+    scanf("%d", &size1);
+
+    inp_array = (int *)malloc(size1 * sizeof(int));
 
     int choice;
 
@@ -81,7 +86,7 @@ int main()
 void enqueue()
 {
     int element;
-    if (rear == SIZE-1)
+    if (rear == size1-1)
     {
         printf("\n Overflow happened");
     }
@@ -146,7 +151,7 @@ void isEmpty()
 
 void isFull()
 {
-    if (rear == SIZE-1)
+    if (rear == size1-1)
     {
         printf("\n Queue is full");
     }
@@ -169,5 +174,5 @@ void peek()
 
 void size()
 {
-    printf("\n Queue size is : %d", SIZE);
+    printf("\n Queue size is : %d", size1);
 }

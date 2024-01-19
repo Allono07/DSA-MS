@@ -106,8 +106,8 @@ struct Node* deleteAtAGivenValue(struct Node *head, int data) {
    printf("Linkedlist after deletion at the End\n");
    linkedlistTraversal(head);
 
-//    head = deleteAtAGivenValue(head,211);
-//    printf("LinkedList after deleting the node at a given value\n");
-//    linkedlistTraversal(head);
+   head = deleteAtAGivenValue(head,7);
+   printf("LinkedList after deleting the node at a given value\n");
+   linkedlistTraversal(head);
 
  }

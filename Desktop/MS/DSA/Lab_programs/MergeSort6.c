@@ -1,4 +1,7 @@
 #include<stdio.h>
+#include<stdlib.h>
+int size;
+int *a;
 
 int merge(int a[],int lb,int mid,int ub){
     int i=lb;
@@ -51,19 +54,27 @@ int mergeSort(int a[],int lb,int ub){
 
 int main()
 {
-int a[8] = {4,1,6,2,6,78,95,1};
+    int val;
+    printf("Enter the size of the array");
+    scanf("%d",&size);
+    a = (int *)malloc(size * sizeof(int));
+ printf("Enter the values of the array, up to %d values: ", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &a[i]);
+    }
 int lb =0;
-int ub = 7;
+int ub = size-1;
 printf("The given array is");
-    for(int i=0;i<8;i++){
+    for(int i=0;i<size;i++){
         printf("%d ",a[i]);
     }
 
 mergeSort(a,lb,ub);
 
   printf("\nThe sorted array is: ");
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i <size; i++) {
         printf("%d ", a[i]);
     }
+     free(a);
 return 0;
 }
