@@ -113,7 +113,6 @@ int main() {
 
     } while (choice != 0);
 
-    // Free the dynamically allocated memory before exiting
     free(stack);
 
     return 0;

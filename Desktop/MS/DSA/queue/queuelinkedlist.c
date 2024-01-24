@@ -51,12 +51,22 @@ void enqueue(int val){
     return val;
     
     }
+void isEmpty(){
+    if (f == r){
+        printf("the queue is empty");
+    }
+
+    else {
+        printf("the queue is not empty");
+    }
+}
 
 int main()
 {
     
     linkedlistTraversal(f);
-    printf("Dequeing element %d\n",dequeue());
+    printf("Dequeing element %d\n",dequeue());  
+    isEmpty();
     enqueue(1);
     enqueue(2);
     enqueue(3);

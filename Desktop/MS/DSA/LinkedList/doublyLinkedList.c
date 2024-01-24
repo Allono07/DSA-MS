@@ -61,19 +61,55 @@ if(head==NULL){
 
 void printLinkedList(struct Node* head){
     while(head!=NULL){
-        printf("%d",head->data);
+        printf("%d ",head->data);
         head=head->next;
     }
 }
 
+struct Node* deleteAtFirst(struct Node* head){
+if (head == NULL){
+    printf("The linked list is empty \n");
+    return head;
+}
+struct Node * temp =head;
+head=head->next;
+free(temp);
+return head;
+}
+
+struct Node * deleteAtEnd(struct Node * head){
+    struct Node * ptr = head;
+    struct Node * last = head->next;
+    if (head == NULL){
+    printf("The linked list is empty \n");
+    return head;
+}
+while(last->next!=NULL){
+    last = last -> next;
+    ptr = ptr->next;
+}
+free(last);
+ptr->next=NULL;
+return head;
+
+}
 int main()
 {
 struct Node * head = NULL;
+head = deleteAtFirst(head);
 head =insertAtBeginning(head, 10);
 head = insertAtBeginning(head, 20);
 head = insertAtEnd(head, 40);
 head = insertAtPosition(head, 50,0);
 printLinkedList(head);
+
+head = deleteAtFirst(head);
+printf("\n");
+printLinkedList(head);
+head = deleteAtEnd(head);
+printf("\n");
+printLinkedList(head);
+head = deleteAfterIndex(head,1);
 
 return 0;
 }

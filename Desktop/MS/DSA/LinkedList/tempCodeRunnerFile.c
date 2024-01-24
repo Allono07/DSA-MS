@@ -1,1 +1,1 @@
-linkedlistTraversal(head);
+struct node* start = NULL;
